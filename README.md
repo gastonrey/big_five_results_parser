@@ -1,4 +1,4 @@
-# Big Five Test Serializer
+# Big Five Test Serializer
 
 This repo containes a serializer for output text result from Short Big Five test results (see sample file `test_result.txt`)
 
@@ -8,6 +8,10 @@ Create an instance as follow:
 
 `serializer = BigFiveResultsTextSerializer.new(txt_result)`
 `serializer.to_h` This will return a hash with all the contained tables at the txt file just parsed.
+
+To post resuls just run:
+
+`ruby bin/post_results.rb` This is the ruby script that parse, post and output results.
 
 # Notes
 
