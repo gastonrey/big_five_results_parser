@@ -209,13 +209,3 @@ Contact
 Personality Test Center
 
 © 2017
-
-
-###
-Match the scores:
-
-(^\w.*[...])(\d{2})
-
-Matches the name:
-
-compares\s(.+?)\sfrom

@@ -10,8 +10,8 @@ class BigFiveResultsPoster
   def initialize(results_hash, email)
     raise 'Email required' unless email
 
-    @results_hash = results_hash.merge(EMAIL: email)
-    @url = Helpers::ParseConfig.config["post"]["url"]
+    @results_hash = results_hash.merge('EMAIL' => email)
+    @url = Helpers::ParseConfig.config['post']['url']
   end
 
   # Returned object responds to next methods:

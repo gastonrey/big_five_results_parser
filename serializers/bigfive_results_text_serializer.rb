@@ -29,9 +29,12 @@ class BigFiveResultsTextSerializer
     return unless elements
 
     if elements.first == elements.first.upcase
-      @maped_list_to_hash[elements.first] = { overall_scores: elements.last }
+      @maped_list_to_hash[elements.first] = {
+        'Overall Score' => elements.last.to_i
+      }
+
       @maped_list_to_hash[elements.first].merge!(
-        facets: pop_until_next_root(@parser.scores)
+        'Facets' => pop_until_next_root(@parser.scores)
       )
       @scores = {}
     end
@@ -44,7 +47,7 @@ class BigFiveResultsTextSerializer
 
     unless list.first.first == list.first.first.upcase
       el = list.shift
-      @scores[el.first] = el.last
+      @scores[el.first] = el.last.to_i
       pop_until_next_root(list)
     end
 

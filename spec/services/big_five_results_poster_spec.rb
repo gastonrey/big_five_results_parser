@@ -26,8 +26,8 @@ describe BigFiveResultsPoster do
       end
 
       it 'then variable instance has #EMAIL key and value' do
-        expect(data_hash).to have_key(:EMAIL)
-        expect(data_hash[:EMAIL]).to eql('foo@bar')
+        expect(data_hash).to have_key('EMAIL')
+        expect(data_hash['EMAIL']).to eql('foo@bar')
       end
     end
 

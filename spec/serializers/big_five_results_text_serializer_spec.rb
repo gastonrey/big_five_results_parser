@@ -24,15 +24,15 @@ describe BigFiveResultsTextSerializer do
       end
 
       it 'contains EXTRAVERSION overall_scores' do
-        expect(new_hash['EXTRAVERSION'][:overall_scores]).to eql('66')
+        expect(new_hash['EXTRAVERSION']['Overall Score']).to be(66)
       end
 
-      it 'contains AGREEABLENESS overall_scores' do
-        expect(new_hash['AGREEABLENESS'][:overall_scores]).to eql('91')
+      it 'contains AGREEABLENESS Overall Score' do
+        expect(new_hash['AGREEABLENESS']['Overall Score']).to be(91)
       end
 
-      it 'contains CONSCIENTIOUSNESS overall_scores' do
-        expect(new_hash['CONSCIENTIOUSNESS'][:overall_scores]).to eql('72')
+      it 'contains CONSCIENTIOUSNESS Overall Score' do
+        expect(new_hash['CONSCIENTIOUSNESS']['Overall Score']).to be(72)
       end
     end
   end

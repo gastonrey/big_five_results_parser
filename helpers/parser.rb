@@ -23,8 +23,8 @@ module Helpers
     # Given a text with score results
     # Extracts the score's tables
     def extract_scores
-      @scores = @text.scan(SCORE_TABLES_REGEX)
-      @scores.each do |el|
+      scores = @text.scan(SCORE_TABLES_REGEX)
+      @scores = scores.each do |el|
         { el.first.delete!('.') => el.last }
       end
     end
